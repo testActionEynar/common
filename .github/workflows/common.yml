@@ -26,11 +26,4 @@ jobs:
           cat ${GITHUB_WORKSPACE}/report.csv 
           echo 'INFO > END'  
           
-      - name: Upload to GoogleDrive
-        uses: adityak74/google-drive-upload-git-action@main
-        with:
-          credentials: ${{ secrets.credentials }}
-          filename: "${{ github.workspace }}/report.csv"
-          folderId: "1p_s9FBE39yTFUv9arzAhKR8PRyJapvTc"
-          name: "report_vulnerability_${{ github.run_number }}.csv" 
- 
+    
